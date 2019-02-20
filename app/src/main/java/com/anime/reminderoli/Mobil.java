@@ -10,6 +10,20 @@ public class Mobil implements Parcelable{
     String id_user;
     String id_oli;
 
+    public String getTanggalService() {
+        return tanggalService;
+    }
+
+    public void setTanggalService(String tanggalService) {
+        this.tanggalService = tanggalService;
+    }
+
+    public static Creator<Mobil> getCREATOR() {
+        return CREATOR;
+    }
+
+    String tanggalService;
+
     public String getStatus() {
         return Status;
     }
@@ -93,6 +107,7 @@ public class Mobil implements Parcelable{
             String noPol = object.getString("noPol");
             String kmSekarang = object.getString("kmAwal");
             String kmService = object.getString("kmService");
+            String tglSer = object.getString("tanggalService");
 
             this.id_user = id_user;
             this.id_oli = id_oli ;
@@ -101,6 +116,7 @@ public class Mobil implements Parcelable{
             this.noPol = noPol;
             this.kmSekarang = kmSekarang;
             this.kmService = kmService ;
+            this.tanggalService = tglSer;
 
 
         }catch (JSONException e){
@@ -119,6 +135,7 @@ public class Mobil implements Parcelable{
         kmSekarang = in.readString();
         kmService = in.readString();
         Status = in.readString();
+        tanggalService = in.readString();
     }
 
     public static final Creator<Mobil> CREATOR = new Creator<Mobil>() {
@@ -148,5 +165,6 @@ public class Mobil implements Parcelable{
         dest.writeString(kmSekarang);
         dest.writeString(kmService);
         dest.writeString(Status);
+        dest.writeString(tanggalService);
     }
 }

@@ -69,6 +69,8 @@ public class MyJobService extends JobService {
                             int hari = calendar.get(Calendar.DAY_OF_MONTH);
                             int bulan = calendar.get(Calendar.MONTH)+1;
                             int tahun = calendar.get(Calendar.YEAR);
+                            String tanggalService = mobil.getTanggalService();
+                            String tanggalHp = hari+"-"+bulan+"-"+tahun;
 
                             Log.d(TAG, "Tanggal Hp: "+hari+":"+bulan+":"+tahun);
                             Log.d(TAG, "onIf" + mobil.getNoPol());
@@ -92,6 +94,9 @@ public class MyJobService extends JobService {
                                 Log.d(TAG, "kmService: " + kmService);
                                 showNotification(getApplicationContext(), "Warning", "Sudah mendekati Wktu Service km sekarang = " + kmSekarang, 100);
                                 jobFinished(job, false);
+                            }
+                            else if(tanggalService.equals(tanggalHp)){
+                                //isi remainder nya apa?
                             }
 
 
