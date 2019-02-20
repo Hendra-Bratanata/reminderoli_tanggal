@@ -107,7 +107,7 @@ public class Mobil implements Parcelable{
             String noPol = object.getString("noPol");
             String kmSekarang = object.getString("kmAwal");
             String kmService = object.getString("kmService");
-            String tglSer = object.getString("tanggalService");
+            String tglSer = object.getString("tgl_service");
 
             this.id_user = id_user;
             this.id_oli = id_oli ;

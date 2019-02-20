@@ -62,6 +62,8 @@ public class DetailUserActivity extends AppCompatActivity {
     Button edtbutton;
     @BindView(R.id.hps_button_detail)
     Button hpsbutton;
+    @BindView(R.id.tglservice)
+            TextView tglService;
 
 
     String URL = "http://reminder.96.lt/getMobil.php";
@@ -128,6 +130,7 @@ public class DetailUserActivity extends AppCompatActivity {
                 mOli.setText("Id Oli\t\t\t\t\t: " + newUser.getId_oli());
                 mJenisMobil.setText("Jenis mobil \t\t\t: " + newUser.getJenisMobil());
                 mNamaMobil.setText("nama Mobil\t\t\t: " + newUser.getNamaMobil());
+                tglService.setText("tgl Service\t\t\t"+newUser.getTanggalService());
                 swipe.setRefreshing(false);
 
                 edtbutton.setOnClickListener(new View.OnClickListener() {

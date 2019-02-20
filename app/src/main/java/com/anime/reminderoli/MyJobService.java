@@ -69,10 +69,11 @@ public class MyJobService extends JobService {
                             int hari = calendar.get(Calendar.DAY_OF_MONTH);
                             int bulan = calendar.get(Calendar.MONTH)+1;
                             int tahun = calendar.get(Calendar.YEAR);
-                            String tanggalService = mobil.getTanggalService();
+                            String tanggalService = mobil.getTanggalService(); 
                             String tanggalHp = hari+"-"+bulan+"-"+tahun;
 
-                            Log.d(TAG, "Tanggal Hp: "+hari+":"+bulan+":"+tahun);
+                            Log.d(TAG, "Tanggal Hp: "+tahun+"-"+bulan+"-"+hari);
+                            Log.d(TAG, "Tanggal server: "+tanggalService);
                             Log.d(TAG, "onIf" + mobil.getNoPol());
                             Log.d(TAG, "onIf" + nopol);
                             int kmService = Integer.parseInt(mobil.getKmService().trim());
